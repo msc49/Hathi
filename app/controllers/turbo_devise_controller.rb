@@ -15,3 +15,4 @@ class TurboDeviseController < ApplicationController
 
   self.responder = Responder
   respond_to :html, :turbo_stream
+end
