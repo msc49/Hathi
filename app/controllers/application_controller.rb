@@ -1,7 +1,7 @@
 class ApplicationController < ActionController::Base
   before_action :configure_permitted_parameters, if: :devise_controller?
-  include Turbo::StreamsHelper
-  include Turbo::FramesHelper
+  # include Turbo::StreamsHelper
+  # include Turbo::FramesHelper
   # make sure if you use heroku to
 
   protected

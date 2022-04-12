@@ -10,6 +10,16 @@ class ChatroomsController < ApplicationController
 
 
   def create
-    @chatroom = Chatroom.create(name: params['chatroom']['name'])
+    @chatroom = Chatroom.new(chatroom_params)
+    @chatroom.save
   end
+
+
+  private
+
+  def chatroom_params
+    params.require(:chatroom).permit(:name)
+  end
+
+
 end

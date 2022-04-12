@@ -2,9 +2,10 @@ class User < ApplicationRecord
   attr_writer :login
   validate :validate_username
   scope :all_excluding_current_user, -> (user) {where.not(id: user)}
+  after_create_commit { broadcast_prepend_to 'users' }
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
-  after_create_commit {broadcast_append_to "users"} # updates user list without updating page through Redis and Hotwire
+   # updates user list without updating page through Redis and Hotwire
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
   def login
