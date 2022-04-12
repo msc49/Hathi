@@ -5,19 +5,19 @@
 
   <h5> Users </h5>
   <%= turbo_stream_from "users" %>
-  <%= turbo_frame_tag "users" do %>
+  
   <div id = "users">
   <%= render @users%>
   </div>
-  <%end%>
+
 
   <h5> ChatRooms </h5>
   <%= turbo_stream_from "chatrooms" %>
-  <%= turbo_frame_tag "chatrooms" do%>
+
   <div id = "chatrooms">
   <%= render @chatrooms %>
   </div>
-  <%end%>
+  
   <%= render 'layouts/new_chatroom_form' %>
 
 

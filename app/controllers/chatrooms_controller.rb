@@ -8,18 +8,22 @@ class ChatroomsController < ApplicationController
     # exclude current user
   end
 
-
   def create
-    @chatroom = Chatroom.new(chatroom_params)
-    @chatroom.save
+    @chatroom = Chatroom.create(name: params['chatroom']['name'])
   end
 
 
-  private
+  # def create
+  #   @chatroom = Chatroom.new(chatroom_params)
+  #   @chatroom.save
+  # end
 
-  def chatroom_params
-    params.require(:chatroom).permit(:name)
-  end
+
+  # private
+
+  # def chatroom_params
+  #   params.require(:chatroom).permit(:name)
+  # end
 
 
 end
