@@ -6,10 +6,19 @@ class ChatroomsController < ApplicationController
     @chatrooms = Chatroom.public_room
     @users = User.all_excluding_current_user(current_user)
     # exclude current user
+    render 'index'
   end
 
   def show
     @singular_chatroom = Chatroom.find(params[:id])
+    @message = Message.new
+    @messages = @singular_chatroom.messages.order(created_at: :asc)
+
+    @chatroom = Chatroom.new
+    @chatrooms = Chatroom.public_room
+    @users = User.all_excluding_current_user(current_user)
+    render 'index'
+
   end
 
   def create

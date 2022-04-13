@@ -18,9 +18,16 @@
   <%= render @chatrooms %>
   </div>
   <%= render 'layouts/new_chatroom_form' %>
-  <% if @singular_chatroom%>
-    <h5 class='text-center'><<%@singular_chatroom.name%></h5>
-  <%end%>
+  <% if @singular_chatroom %>
+      <div id="single_room">
+        <h5 class="text-center"> <%=  @singular_chatroom.name %> </h5>
+        <%= turbo_stream_from @singular_chatroom %>
+        <div id="messages">
+          <%= render @messages %>
+        </div>
+        <%= render 'layouts/new_message_form' %>
+      </div>
+    <% end %>
 
 
 </div>
