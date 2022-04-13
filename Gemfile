@@ -60,3 +60,5 @@ gem "devise", "~> 4.8"
 gem "turbo-rails", "~> 1.0"
 
 # gem "hotwire-rails"
+
+gem "gemoji", "~> 3.0"

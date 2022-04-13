@@ -13,7 +13,7 @@ class ChatroomsController < ApplicationController
     @singular_chatroom = Chatroom.find(params[:id])
     @message = Message.new
     @messages = @singular_chatroom.messages.order(created_at: :asc)
-
+   
     @chatroom = Chatroom.new
     @chatrooms = Chatroom.public_room
     @users = User.all_excluding_current_user(current_user)

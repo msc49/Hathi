@@ -1,9 +1,8 @@
 <div class="bg-gray">
+  <h4> Welcome to Hathi! 𓃰 </h4>
+  <h6> Hathi Member: <%= current_user.username%> </h6>
 
-  <h4> Hathi Member: <%= current_user.username%> </h4>
-
-
-  <h5> Users </h5>
+  <h6> Users </h6>
   <%= turbo_stream_from "users" %>
   
   <div id = "users">
@@ -11,7 +10,7 @@
   </div>
 
 
-  <h5> ChatRooms </h5>
+  <h6> ChatRooms </h6>
   <%= turbo_stream_from "chatrooms" %>
 
   <div id = "chatrooms">
