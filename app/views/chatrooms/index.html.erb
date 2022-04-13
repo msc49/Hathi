@@ -1,4 +1,4 @@
-<div class="vessel">
+<div class="bg-gray">
 
   <h4> Hathi Member: <%= current_user.username%> </h4>
 
@@ -17,8 +17,10 @@
   <div id = "chatrooms">
   <%= render @chatrooms %>
   </div>
-  
   <%= render 'layouts/new_chatroom_form' %>
+  <% if @singular_chatroom%>
+    <h5 class='text-center'><<%@singular_chatroom.name%></h5>
+  <%end%>
 
 
 </div>

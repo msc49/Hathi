@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2022_04_12_052132) do
+ActiveRecord::Schema[7.0].define(version: 2022_04_13_023225) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -85,6 +85,16 @@ ActiveRecord::Schema[7.0].define(version: 2022_04_12_052132) do
     t.index ["lender_id"], name: "items_item_lender_id_719e435d"
   end
 
+  create_table "messages", force: :cascade do |t|
+    t.bigint "user_id", null: false
+    t.bigint "chatroom_id", null: false
+    t.string "body"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["chatroom_id"], name: "index_messages_on_chatroom_id"
+    t.index ["user_id"], name: "index_messages_on_user_id"
+  end
+
   create_table "users", force: :cascade do |t|
     t.string "email", default: "", null: false
     t.string "encrypted_password", default: "", null: false
@@ -118,4 +128,6 @@ ActiveRecord::Schema[7.0].define(version: 2022_04_12_052132) do
   add_foreign_key "django_admin_log", "users_newuser", column: "user_id", name: "django_admin_log_user_id_c564eba6_fk_users_newuser_id", deferrable: :deferred
   add_foreign_key "items_item", "users_newuser", column: "borrower_id", name: "items_item_borrower_id_a678abf7_fk_users_newuser_id", deferrable: :deferred
   add_foreign_key "items_item", "users_newuser", column: "lender_id", name: "items_item_lender_id_719e435d_fk_users_newuser_id", deferrable: :deferred
+  add_foreign_key "messages", "chatrooms"
+  add_foreign_key "messages", "users"
 end

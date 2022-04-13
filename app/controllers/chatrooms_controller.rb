@@ -8,6 +8,10 @@ class ChatroomsController < ApplicationController
     # exclude current user
   end
 
+  def show
+    @singular_chatroom = Chatroom.find(params[:id])
+  end
+
   def create
     @chatroom = Chatroom.create(name: params['chatroom']['name'])
   end
