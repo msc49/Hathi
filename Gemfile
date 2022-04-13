@@ -62,3 +62,5 @@ gem "turbo-rails", "~> 1.0"
 # gem "hotwire-rails"
 
 gem "gemoji", "~> 3.0"
+
+gem "cssbundling-rails", "~> 1.1"

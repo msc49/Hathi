@@ -1,3 +1,2 @@
 //= link_tree ../images
-//= link_directory ../stylesheets .css
-//= link custom.css
+//= link custom.css//= link_tree ../builds

@@ -14,3 +14,4 @@ import * as bootstrap from "bootstrap"
 Rails.start()
 Turbolinks.start()
 ActiveStorage.start()
+import * as bootstrap from "bootstrap"

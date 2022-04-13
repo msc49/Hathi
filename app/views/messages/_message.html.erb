@@ -1,6 +1,6 @@
-<div class="message-box">
-  <%= message.body%>
-  </br>
-  <%= message.user.username%>
-
+<div class="ttp-<%=message.user.id%>">
+  <div class="message-box message-<%= message.user.id %>">
+      <%= message.body %>
+      <h6 > <%= message.user.username %> </h6>
+  </div>
 </div>
