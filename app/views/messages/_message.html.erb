@@ -2,5 +2,10 @@
   <div class="message-box message-<%= message.user.id %>">
       <%= message.body %>
       <h6 > <%= message.user.username %> </h6>
+      <div id="time">
+      
+      <%= time_ago_in_words(message.created_at) %> before
+      </div>
   </div>
 </div>
+<
