@@ -1,5 +1,6 @@
-<div class="bg-gray">
+<div id="chatroom_container" class="row, bg-dark text-light">
   <h4> Welcome to Hathi! 𓃰 </h4>
+  <div id="side_panel" class="col-md-4 col-sm-4">
   <h6> Hathi Member: <%= current_user.username%> </h6>
 
   <h6> Users </h6>
@@ -17,6 +18,9 @@
   <%= render @chatrooms %>
   </div>
   <%= render 'layouts/new_chatroom_form' %>
+  <div id="room_container"
+  class="col-md-8 col-sm-8 bg-dark text-light">
+  hi
   <% if @singular_chatroom %>
       <div id="single_room">
         <h5 class="text-center"> <%=  @singular_chatroom.name %> </h5>
@@ -26,7 +30,9 @@
         </div>
         <%= render 'layouts/new_message_form' %>
       </div>
+      </div>
     <% end %>
+  </div>
 
 
 </div>
