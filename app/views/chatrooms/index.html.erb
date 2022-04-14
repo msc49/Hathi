@@ -2,19 +2,14 @@
 <h4> Welcome to Hathi! 𓃰 </h4>
 </br></br></br>
   <div id="side_panel" class="col-md-4 col-sm-4">
-  <h5> Hello, <%= current_user.username.capitalize%> </h5>
-  </br>
-  </br>
-
+  <h5> Hello, <%= current_user.username.capitalize%> </h5> </br></br>
   <h5> Online Users: </h5>
   <%= turbo_stream_from "users" %>
-
+  <%# <% if @users.onlinestatus?%> 
     <div id = "users">
     <%= render @users%>
-    </div>
-    </br>
-    </br>
-    
+    </div></br> </br>
+    <%# <%end%>
   <h5> ChatRooms </h5>
   <%= turbo_stream_from "chatrooms" %>
     <div id = "chatrooms">
@@ -32,9 +27,6 @@
         <%= render @messages %>
         </div>
         <%= render 'layouts/new_message_form' %>
-      
-      
-
       </div>
     <% end %>
     </div>
