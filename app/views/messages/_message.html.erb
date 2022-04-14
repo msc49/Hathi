@@ -2,12 +2,30 @@
 <div class="ttp-<%=message.user.id%>">
 
   <div class="message-box message-<%= message.user.id %>">
+  <div>
     <small > <%= message.user.username.capitalize %> </small></br>
      <h4> <%= message.body %> </h4>
       
       <div id="time">
       
-     <small> <%= time_ago_in_words(message.created_at) %> ago </small>
+     
+     </div>
       </div>
+<% if message.attachments.attached? %>
+      <% message.attachments.each_with_index do |attachment, index| %>
+        <% if attachment.image? %>
+          <%= image_tag(message.chatroom_file(index)) %>
+        <% elsif attachment.video? %>
+          <%= video_tag(url_for(attachment), controls:'') %>
+        <% elsif attachment.audio? %>
+          <%= audio_tag(url_for(attachment), controls: '') %>
+        <% else %>
+          <%= link_to attachment.filename, url_for(attachment) %>
+        <% end %>
+      <% end %>
+    <% end %>
+    </br>
+<small> <%= time_ago_in_words(message.created_at) %> ago </small>
+
   </div>
 </div>

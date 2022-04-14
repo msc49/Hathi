@@ -32,11 +32,11 @@ body {
 }
 
 #single_room {
-  height: calc(100vh - 150px);
+  height: calc(100vh - 110px);
 }
 
 #messages {
-  height: calc(100vh - 150px);
+  height: calc(80vh - 80px);
   overflow-x: hidden;
   overflow-y: scroll;
 }
