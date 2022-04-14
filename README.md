@@ -1,24 +1,27 @@
-# README
+# Real Time Chat-Room App
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## prerequisite
 
-Things you may want to cover:
+```
+bundle install
+```
+```
+npm install
+```
 
-* Ruby version
+- make sure you migrate the databases
 
-* System dependencies
+```
+rails db:migrate
+```
 
-* Configuration
+## Running the server
 
-* Database creation
+in the terminal, do not use rails server but instead type the following and enter:
 
-* Database initialization
+```
+dev/bin
 
-* How to run the test suite
+```
 
-* Services (job queues, cache servers, search engines, etc.)
 
-* Deployment instructions
-
-* ...
