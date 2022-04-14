@@ -10,11 +10,13 @@
     <%= render @users%>
     </div></br> </br>
     <%# <%end%>
-  <h5> ChatRooms </h5>
+  <h5> Chat Rooms </h5>
   <%= turbo_stream_from "chatrooms" %>
     <div id = "chatrooms">
     <%= render @chatrooms %>
-   <small class="text-info " > <%= @users.uniq.count + 1%> Members </small>
+    <div class="text-info ">
+   Total Members:  <%= @users.uniq.count + 1%> 
+   </div>
     </div>
   <%= render 'layouts/new_chatroom_form' %>
   </div>

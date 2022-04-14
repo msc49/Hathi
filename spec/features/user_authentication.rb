@@ -51,6 +51,13 @@ RSpec.feature 'User Authentication ', type: :feature do
     expect(page).not_to have_content("Welcome to Hathi ")
   end
 
+  scenario 'can log out ' do
+    sign_up(username: "test", email: "test@test.com", password: "test12345", password_confirmation: "test12345")
+    logout()
+    expect(page).not_to have_content("Welcome to Hathi ")
+    expect(page).to have_content("The next biggest social platform")
+  end
+
 
 
 

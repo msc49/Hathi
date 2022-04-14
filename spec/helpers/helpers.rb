@@ -31,4 +31,18 @@ module Helpers
 
   end
 
+  def logout
+    logout_link = '/html/body/div/a[2]'
+    find(:xpath, logout_link).click
+
+  end
+
+  def create_chatroom(room:)
+    chatroom_text = '//*[@id="chatroom_name"]'
+    add_chatroom_button - '//*[@id="side_panel"]/form/input[3]'
+
+    visit('/chatrooms')
+    find(:xpath, chatroom_text).set(room)
+    find(:xpath, add_chatroom_button).click
+
 end
