@@ -45,4 +45,31 @@ module Helpers
     find(:xpath, chatroom_text).set(room)
     find(:xpath, add_chatroom_button).click
 
+  end
+
+  def message(body:)
+    room1_link = '//*[@id="chatrooms"]/div[2]/div/h4/a'
+    message_text_box1 = '//*[@id="chat-text"]'
+  end
+
+  def message_two_chats(body1:, body2:, room2:)
+    room1_link = '//*[@id="chatrooms"]/div[2]/div/h4/a'
+    message_text_box1 = '//*[@id="chat-text"]'
+    message_button_1 = '//*[@id="single_room"]/div[2]/form/input[3]' #c
+    add_chatroom_text_2 = '//*[@id="chatroom_name"]'
+    add_chatroom_button_2 = '//*[@id="side_panel"]/form/input[3]'
+    room2_link = '//*[@id="chatrooms"]/div[3]/div/h4/a'
+    message_text_2 = '//*[@id="chat-text"]'
+    message_button_2 = '//*[@id="single_room"]/div[2]/form/input[3]'
+
+    find(:xpath, room1_link).click
+    find(:xpath, message_text_box1).set(body1)
+    find(:xpath, message_button_1).click
+
+
+  end
+
+
+
+
 end

@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-RSpec.feature 'User Authentication ', type: :feature do
+RSpec.feature 'Chat Room ', type: :feature do
 
   before :each do
     visit '/'
@@ -45,15 +45,6 @@ RSpec.feature 'User Authentication ', type: :feature do
     visit('/chatrooms')
     expect(page).to have_content("Total Members: 2")
   end
-
-
-
-
-
-
-
-
-
 
 
 
