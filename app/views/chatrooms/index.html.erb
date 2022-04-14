@@ -1,24 +1,26 @@
 <div id="chatroom_container" class="row blk_background text-light">
-<h4> Welcome to Hathi! 𓃰 </h4>
-</br></br></br>
+
   <div id="side_panel" class="col-md-4 col-sm-4">
-  <h5> Hello <%= current_user.username.capitalize%> </h5> </br></br>
+  <h4> Welcome to Hathi! 𓃰 </h4>
+</br>
+  <h5> Hello <%= current_user.username.capitalize%> &nbsp (｡◕‿◕｡) </h5> </br></br>
   <h5> Online Users: </h5>
   <%= turbo_stream_from "users" %>
   <%# <% if @users.onlinestatus?%> 
     <div id = "users">
     <%= render @users%>
-    </div></br> </br>
+    </div></br> 
     <%# <%end%>
   <h5> Chat Rooms </h5>
   <%= turbo_stream_from "chatrooms" %>
     <div id = "chatrooms">
     <%= render @chatrooms %>
-    <div class="text-info ">
-   Total Members:  <%= @users.uniq.count + 1%> 
-   </div>
+    
     </div>
   <%= render 'layouts/new_chatroom_form' %>
+  <div class="text-info ">
+   Total Members:  <%= @users.uniq.count + 1%> 
+   </div>
   </div>
     <div id="room_container"
     class="col-md-8 col-sm-8 bg-dark text-light">
@@ -28,6 +30,7 @@
       <%= turbo_stream_from @singular_chatroom %>
         <div id="messages">
         <%= render @messages %>
+        
         </div>
         <%= render 'layouts/new_message_form' %>
       </div>
