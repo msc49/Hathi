@@ -67,3 +67,4 @@ gem "gemoji", "~> 3.0"
 
 gem "cssbundling-rails", "~> 1.1"
 gem 'image_processing', '~> 1.2'
+
