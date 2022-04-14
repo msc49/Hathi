@@ -14,6 +14,7 @@
   <%= turbo_stream_from "chatrooms" %>
     <div id = "chatrooms">
     <%= render @chatrooms %>
+   <small class="text-info " > <%= @users.uniq.count%> Members </small>
     </div>
   <%= render 'layouts/new_chatroom_form' %>
   </div>
