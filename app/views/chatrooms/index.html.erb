@@ -15,23 +15,15 @@
     </br>
     </br>
     
-
-
   <h5> ChatRooms </h5>
   <%= turbo_stream_from "chatrooms" %>
-
     <div id = "chatrooms">
-    
     <%= render @chatrooms %>
-    
-   
     </div>
-    
   <%= render 'layouts/new_chatroom_form' %>
   </div>
     <div id="room_container"
     class="col-md-8 col-sm-8 bg-dark text-light">
-
     <% if @singular_chatroom %>
       <div id="single_room">
       <h3 class="text-center"> <%=  @singular_chatroom.name.capitalize %> </h3>
@@ -45,5 +37,4 @@
     <% end %>
     </div>
       
-
 </div>
