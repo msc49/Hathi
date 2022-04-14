@@ -1,21 +1,30 @@
 <div id="chatroom_container" class="row blk_background text-light">
 <h4> Welcome to Hathi! 𓃰 </h4>
+</br></br></br>
   <div id="side_panel" class="col-md-4 col-sm-4">
-  <h6> Hathi Member: <%= current_user.username%> </h6>
+  <h5> Hello, <%= current_user.username.capitalize%> </h5>
+  </br>
+  </br>
 
-  <h6> Users </h6>
+  <h5> Online Users: </h5>
   <%= turbo_stream_from "users" %>
 
     <div id = "users">
     <%= render @users%>
     </div>
+    </br>
+    </br>
+    
 
 
-  <h6> ChatRooms </h6>
+  <h5> ChatRooms </h5>
   <%= turbo_stream_from "chatrooms" %>
 
     <div id = "chatrooms">
+    
     <%= render @chatrooms %>
+    
+   
     </div>
     
   <%= render 'layouts/new_chatroom_form' %>
@@ -25,7 +34,7 @@
 
     <% if @singular_chatroom %>
       <div id="single_room">
-      <h5 class="text-center"> <%=  @singular_chatroom.name %> </h5>
+      <h3 class="text-center"> <%=  @singular_chatroom.name.capitalize %> </h3>
       <%= turbo_stream_from @singular_chatroom %>
         <div id="messages">
         <%= render @messages %>
@@ -35,6 +44,6 @@
       </div>
     <% end %>
     </div>
-
+      
 
 </div>

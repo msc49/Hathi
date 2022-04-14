@@ -1,11 +1,13 @@
+
 <div class="ttp-<%=message.user.id%>">
+
   <div class="message-box message-<%= message.user.id %>">
-      <%= message.body %>
-      <h6 > <%= message.user.username %> </h6>
+    <small > <%= message.user.username.capitalize %> </small></br>
+     <h4> <%= message.body %> </h4>
+      
       <div id="time">
       
-      <%= time_ago_in_words(message.created_at) %> before
+     <small> <%= time_ago_in_words(message.created_at) %> ago </small>
       </div>
   </div>
 </div>
-<

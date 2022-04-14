@@ -1,4 +1,14 @@
 
+#purple_text{
+  color: purple;
+}
+
+.home_btn {
+  height:200%;
+  width:200%;
+}
+
+
 .time_flex {
   display: flex;
   justify-content: flex-end;

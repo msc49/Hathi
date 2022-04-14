@@ -1,6 +1,9 @@
 <div>
 
+<div class="card no-outline mb-2 room-card">
+<%= link_to chatroom.name.capitalize, chatroom, class:"text-info" %>
 
-<%= link_to chatroom.name, chatroom%>
+<small class="text-info " > <%= @users.uniq.count%> Members </small>
+</div>
 
 </div>

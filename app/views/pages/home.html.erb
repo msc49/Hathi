@@ -1,17 +1,22 @@
-<div class = "bg-dark">
-<h1 class = "text-col">Welcome to Hathi </h1>
+<div id="chatroom_container" class = "blk_background text-light">
+<h1 >Welcome to Hathi </h1>
 <p>The next biggest social platform</p>
 
 <% if current_user%>
-  <%=link_to 'Chat Rooms', chatrooms_path%>
-  <%=button_to 'Logout', destroy_user_session_path, method: :delete%>
+
+  <%=link_to 'Chat Rooms', chatrooms_path %>
+  </br>
+  <%=link_to 'Logout', destroy_user_session_path, method: :delete%>
+
 
 <%else%>
 
-  <%=link_to 'Sign In', new_user_session_path%>
+  <%=link_to 'Sign In', new_user_session_path, class: "btn btn-primary home_btn"%>
   <br>
-  <%=link_to 'Sign Up', new_user_registration_path%>
+  <%=link_to 'Sign Up', new_user_registration_path, class: "btn btn-primary home_btn"%>
 
 
 <%end%>
+
+
 </div>
