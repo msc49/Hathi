@@ -1,11 +1,10 @@
 <div class="form-group msg-form">
   <%= form_with(model: [@singular_chatroom, @message], remote: true, class:'d-flex') do |f| %>
-    <div class="image-upload">
+    <div >
       <label for="message_attachments">
-        <i class="bi bi-plus-circle upload-button"></i>
+        <i ></i>
       </label>
-      <%= f.file_field(:attachments, multiple: true, 
-        data:{controller: "message-preview", action:"change->message-preview#preview"}) %>
+      <%= f.file_field(:attachments, multiple: true) %>
     </div>
     <%= f.text_field  :body, id: 'chat-text', class: 'form-control msg-content', autocomplete: 'off', placeholder: '𓃰𓃰𓃰𓃰𓃰𓃰' %>
     <%= f.submit "Send Message", data: {disable_with: false}, class: 'btn btn-primary' %>

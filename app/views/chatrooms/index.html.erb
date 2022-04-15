@@ -2,7 +2,7 @@
 
   <div id="side_panel" class="col-md-4 col-sm-4">
   <h4> Welcome to Hathi! 𓃰 </h4>
-</br>
+  </br>
   <h5> Hello <%= current_user.username.capitalize%> &nbsp (｡◕‿◕｡) </h5> </br></br>
   <h5> Online Users: </h5>
   <%= turbo_stream_from "users" %>
@@ -10,31 +10,31 @@
     <div id = "users">
     <%= render @users%>
     </div></br> 
-    <%# <%end%>
+  <%# <%end%>
   <h5> Chat Rooms </h5>
   <%= turbo_stream_from "chatrooms" %>
     <div id = "chatrooms">
     <%= render @chatrooms %>
-    
     </div>
   <%= render 'layouts/new_chatroom_form' %>
-  <div class="text-info ">
-   Total Members:  <%= @users.uniq.count + 1%> 
-   </div>
-  </div>
-    <div id="room_container"
-    class="col-md-8 col-sm-8 bg-dark text-light">
-    <% if @singular_chatroom %>
-      <div id="single_room">
-      <h3 class="text-center"> <%=  @singular_chatroom.name.capitalize %> </h3>
-      <%= turbo_stream_from @singular_chatroom %>
-        <div id="messages">
-        <%= render @messages %>
-        
-        </div>
-        <%= render 'layouts/new_message_form' %>
-      </div>
-    <% end %>
+    <div class="text-info ">
+    Total Members:  <%= @users.uniq.count + 1%> 
     </div>
-      
+  </div>
+
+
+  <div id="room_container"
+  class="col-md-8 col-sm-8 bg-dark text-light">
+  <% if @singular_chatroom %>
+    <div id="single_room">
+    <h3 class="text-center"> <%=  @singular_chatroom.name.capitalize %> </h3>
+    <%= turbo_stream_from @singular_chatroom %>
+    <div id="messages">
+    <%= render @messages %>
+    </div>
+
+  <%= render 'layouts/new_message_form' %>
+  </div>
+    <% end %>
+  </div>
 </div>

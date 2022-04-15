@@ -5,10 +5,10 @@ class Message < ApplicationRecord
   has_many_attached :attachments, dependent: :destroy
 
 
-    def chatroom_file(index)
-      file = attachments[index]
-      if file.video? or file.image?
-        file.variant(resize_to_limit: [150,150]).processed
-      end
+  def chatroom_file(index)
+    file = attachments[index]
+    if file.video? or file.image?
+      file.variant(resize_to_limit: [150,150]).processed
     end
+  end
 end
