@@ -1,8 +1,16 @@
 # Real Time Chat-Room App
 
-Hathi is a real time Chatroom messenger in which users can create 
+Hathi is a real time Chatroom messenger in which users can create Chatrooms and communicate with one another. It is created using Rails and utlises Hotwire for partial page updates over the web socket. 
 
-## prerequisite
+## Features
+
+- Real time User creation
+- Real time Chatroom Creation
+- Real time Messaging (including images/videos/pdfs)
+
+## Prerequisites
+
+- Ensure PostgreSQL is installed on your machine
 
 ```
 bundle install
@@ -22,9 +30,26 @@ rails db:migrate
 in the terminal, do not use rails server but instead type the following and enter:
 
 ```
-dev/bin
+bin/dev
 
 ```
 
-Now open up your browser (I suggest using Chrome or Safari because Firefox can be a hit or miss) and go to localhost:3000
+Now open up your browser (I suggest using Chrome or Safari because Firefox can be a hit or miss) and go to localhost:3000 then sign up and head to the Chatrooms.
+
+## Feature Previews
+
+1. Real Time ChatRoom Creation
+
+[!Chat Room Creation](./app/assets/gifs/real_time_chatroom_creation.gif)
+
+
+
+2. Real Time Messaging 
+
+[!Real Time Messaging](./app/assets/gifs/real_time_messaging.gif)
+
+
+3. Real Time User Creation
+
+[! User Creation  ](./app/assets/gifs/real_time_user_creation.gif)
 
