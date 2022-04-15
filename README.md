@@ -53,3 +53,7 @@ Now open up your browser (I suggest using Chrome or Safari because Firefox can b
 
 ![User Creation  ](./app/assets/gifs/real_time_user_creation.gif)
 
+
+## Other things to note
+
+The schema.rb file has some tables from an old django project that was located in my database, I will remove it when possible! 
