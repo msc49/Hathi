@@ -40,16 +40,16 @@ Now open up your browser (I suggest using Chrome or Safari because Firefox can b
 
 1. Real Time ChatRoom Creation
 
-[!Chat Room Creation](./app/assets/gifs/real_time_chatroom_creation.gif)
+![Chat Room Creation](./app/assets/gifs/real_time_chatroom_creation.gif)
 
 
 
 2. Real Time Messaging 
 
-[!Real Time Messaging](./app/assets/gifs/real_time_messaging.gif)
+![Real Time Messaging](./app/assets/gifs/real_time_messaging.gif)
 
 
 3. Real Time User Creation
 
-[! User Creation  ](./app/assets/gifs/real_time_user_creation.gif)
+![User Creation  ](./app/assets/gifs/real_time_user_creation.gif)
 
